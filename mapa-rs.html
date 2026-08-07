@@ -9,12 +9,12 @@
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#eef1f5; --card:#fff; --ink:#1f2733; --mut:#6b7684; --line:#dde3ea;
-  --blue:#123a6b; --blueh:#1e5aa8; --lula:#c0392b; --bolso:#1e5aa8;
-  --el:#1a7f4b; --su:#c98a1a; --ne:#8a94a0; --hl:#ffd24d;
+  --blue:#0f4d2e; --blueh:#1e5aa8; --lula:#c0392b; --bolso:#1e5aa8;
+  --el:#1a7f4b; --su:#c98a1a; --ne:#8a94a0; --hl:#ffd24a;
 }
 body{font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);font-variant-numeric:tabular-nums}
 h1,.top h1,.gnav .brand,.card>.hd{font-family:"Outfit",-apple-system,"Segoe UI",Roboto,sans-serif}
-.gnav{background:#0d2947;color:#fff;display:flex;align-items:center;gap:4px;padding:0 14px;flex-wrap:wrap}
+.gnav{background:#0f4d2e;color:#fff;display:flex;align-items:center;gap:4px;padding:0 14px;flex-wrap:wrap}
 .gnav .brand{font-weight:800;font-size:13px;padding:9px 12px 9px 0;letter-spacing:.3px}
 .gnav a{color:#cdd8e6;text-decoration:none;font-size:12.5px;padding:11px 13px;border-bottom:2px solid transparent}
 .gnav a:hover{color:#fff}
@@ -128,7 +128,6 @@ tbody tr.sel{background:#fff7db}
       <button class="laybtn" data-layer="pref">Prefeito (aliança)</button>
       <button class="laybtn" data-layer="dep">Dependência de Brasília</button>
       <button class="laybtn" data-layer="setor">Economia (setor)</button>
-      <button class="laybtn" data-layer="apo">Apoiadores</button>
     </div>
     <div class="mapbox">
       <svg id="map" viewBox="0 0 720 701" preserveAspectRatio="xMidYMid meet"></svg>
@@ -251,10 +250,7 @@ const LAYERS={
     fill:s=>SECOR[s.se]||NEU,
     tip:s=>s.se?`Economia: ${s.se}`:'sem dado',
     legend:`<span><b style="background:#4a8c4a"></b>Agropecuária</span><span><b style="background:#2f6ea3"></b>Serviços</span><span><b style="background:#7d5a9e"></b>Indústria</span>`},
-  apo:{title:'· apoiadores do Rony',
-    fill:s=>(s.apo||0)?lerp([200,232,221],[26,127,75],Math.min(1,(s.apo||0)/8)):'#eef1f4',
-    tip:s=>`${s.apo||0} apoiador${(s.apo||0)===1?'':'es'}`,
-    legend:`<span><b style="background:#eef1f4;box-shadow:inset 0 0 0 1px #ccd"></b>0</span><span><i class="gr" style="background:linear-gradient(90deg,#c8e8dd,#1a7f4b)"></i>1 → 12+ apoiadores</span>`}
+
 };
 let curLayer='pres';
 function applyLayer(k){
@@ -294,7 +290,7 @@ function openDet(n){
   const lw=Math.round(d.lp), bw=Math.round(d.bp);
   const ver=d.ver.map((v,i)=>`<div class="vrow"><span class="idx">${i+1}</span><span class="nm">${v.nome}</span><span class="tagp">${v.partido}</span><span class="vt">${fmt(v.votos)}</span></div>`).join('');
   const df=(d.dfall&&d.dfall.length?d.dfall:d.df3).map((v,i)=>`<div class="vrow"><span class="idx">${i+1}</span><span class="nm">${v.nome}</span><span class="tagp">${v.partido}</span><span class="vt">${fmt(v.votos)}${v.pct!=null?' · '+v.pct+'%':''}</span></div>`).join('');
-  const apoHtml = d.apo>0 ? `<div class="sec" style="border-color:#cfe0f5"><div class="in" style="display:flex;align-items:center;gap:8px"><span style="font-size:20px">🤝</span><div><b style="font-size:15px">${d.apo} apoiador${d.apo>1?'es':''}</b> <span class="mut">nesta cidade</span><div class="mini"><span>lista completa (nomes/contatos) na ferramenta interna</span></div></div></div></div>` : '';
+  const apoHtml = '';
   const p=d.pref;
   const e=d.econ;
   const moneyBR=v=>{if(v==null)return '-';if(v>=1e9)return 'R$ '+(v/1e9).toFixed(2).replace('.',',')+' bi';if(v>=1e6)return 'R$ '+(v/1e6).toFixed(1).replace('.',',')+' mi';return 'R$ '+fmt(Math.round(v));};
