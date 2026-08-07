@@ -1,0 +1,83 @@
+<!doctype html><html lang="pt-br"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Operação Tiago · Central de Conteúdo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#eef1f5;--card:#fff;--ink:#1f2733;--mut:#6b7684;--line:#dde3ea;--blue:#0d2947;--acc:#4a90d9}
+body{font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);font-variant-numeric:tabular-nums}
+.hero h1,.card h2,.gnav .brand{font-family:"Outfit",-apple-system,"Segoe UI",Roboto,sans-serif}
+.gnav{background:#0d2947;color:#fff;display:flex;align-items:center;gap:4px;padding:0 14px;flex-wrap:wrap}
+.gnav .brand{font-weight:800;font-size:13px;padding:9px 12px 9px 0}
+.gnav a{color:#cdd8e6;text-decoration:none;font-size:12.5px;padding:11px 13px;border-bottom:2px solid transparent}
+.gnav a:hover{color:#fff} .gnav a.on{color:#fff;border-bottom-color:#e6b422;font-weight:600}
+.hero{background:linear-gradient(120deg,#0d2947,#16406e);color:#fff;padding:34px 22px 30px}
+.hero .in{max-width:1000px;margin:0 auto}
+.hero h1{font-size:26px;font-weight:800;letter-spacing:.2px}
+.hero p{opacity:.82;margin-top:7px;font-size:14px;max-width:640px}
+.hero .dia{margin-top:14px;display:inline-flex;gap:8px;flex-wrap:wrap;font-size:12px}
+.hero .dia b{background:rgba(255,255,255,.14);padding:4px 11px;border-radius:20px;font-weight:600}
+.wrap{max-width:1000px;margin:0 auto;padding:20px 16px 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:8px;transition:transform .12s,box-shadow .12s;box-shadow:0 1px 3px rgba(20,30,50,.05)}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(13,41,71,.13);border-color:#b9c6d6}
+.card.soon{opacity:.72;pointer-events:none}
+.card .ic{font-size:26px}
+.card h2{font-size:17px;font-weight:700}
+.card p{color:var(--mut);font-size:13px;flex:1}
+.card .go{color:var(--acc);font-weight:600;font-size:13px}
+.card .tag{display:inline-flex;gap:6px;flex-wrap:wrap;font-size:11px;margin-top:2px}
+.card .tag span{background:#eef2f7;color:#40566f;padding:2px 9px;border-radius:20px;font-weight:600}
+.card.big{grid-column:1/-1;background:linear-gradient(120deg,#fff,#f3f7fc);border-color:#cfe0f2}
+.foot{text-align:center;color:var(--mut);font-size:11.5px;margin-top:26px;line-height:1.7}
+.sec-t{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);margin:22px 4px 4px}
+</style></head><body>
+<div class="gnav">
+  <span class="brand">🎯 Operação Tiago</span>
+  <a href="index.html" class="on">Início</a>
+  <a href="central.html">Central de Inteligência</a>
+  <a href="mapa-rs.html">Mapa Eleitoral</a>
+</div>
+<div class="hero"><div class="in">
+  <h1>Central de Conteúdo · Tiago Simon</h1>
+  <p>Da notícia ao vídeo pronto: pauta do RS rankeada, fé e liberdade, e a voz do Tiago, num lugar só.</p>
+  <div class="dia">
+    <b>📅 2026-08-07</b>
+    <b>📰 2400 notícias no radar</b>
+    <b>📍 Rio Grande do Sul</b>
+  </div>
+</div></div>
+<div class="wrap">
+  <a class="card big" href="central.html">
+    <div class="ic">📊</div>
+    <h2>Central de Inteligência</h2>
+    <p>Radar de notícias com peso viral filtrado pelos temas de Tiago e pela região, Pauta Quente do dia e perfil eleitoral dos 497 municípios do RS. É daqui que sai o roteiro.</p>
+    <div class="tag"><span>2400 notícias</span><span>Pauta Quente</span><span>Perfil Eleitoral</span></div>
+    <span class="go">Abrir central →</span>
+  </a>
+
+  <div class="sec-t">Ferramentas</div>
+  <div class="grid">
+    <a class="card" href="mapa-rs.html">
+      <div class="ic">🗺️</div>
+      <h2>Mapa Eleitoral RS</h2>
+      <p>Mapa clicável dos 497 municípios: Lula × Bolsonaro, prefeito e vereadores eleitos e deputados mais votados por cidade.</p>
+      <div class="tag"><span>TSE 2022 · 2024</span></div>
+      <span class="go">Abrir mapa →</span>
+    </a>
+    <div class="card soon">
+      <div class="ic">📝</div>
+      <h2>Roteiros do Dia</h2>
+      <p>As notícias quentes viram roteiro na voz de Tiago, com fonte confirmada, prontos pra aprovar e gravar.</p>
+      <div class="tag"><span>em preparação</span></div>
+      <span class="go">Em breve</span>
+    </div>
+  </div>
+
+  <div class="foot">
+    Operação Tiago · fábrica de conteúdo político · dados eleitorais do TSE (2022 e 2024).<br>
+    Radar de notícias atualizado pela rotina diária · Deputado Estadual · RS.
+  </div>
+</div>
+</body></html>
